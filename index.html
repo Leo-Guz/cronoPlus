@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Cronómetro Plus</title>
+    <link rel="shortcut icon" href="clock-solid.ico" type="image/x-icon">
+</head>
+<body>
+     <header>
+        <h1>C R O N Ó M E T R O</h1>
+        <h4 id="alert"></h4>
+        <hr>
+     </header>
+     <main>
+        <table>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(0)">1</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(1)">2</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(2)">3</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(3)">4</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(4)">5</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(5)">6</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(6)">7</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(7)">8</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(8)">9</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(9)">10</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(10)">11</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(11)">12</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(12)">13</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(13)">14</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(14)">15</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(15)">16</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(16)">17</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+                <tr class="fila">
+                    <td class="col-1" onclick="fijarTiempo(17)">18</td>
+                    <td class="col-2"><input type="text" placeholder="Escribe el nombre de la asignación"></td>
+                    <td class="col-3"><input type="number" class="input" value="0" min="1"></td>
+                    <td class="col-5"><input type="text" class="valor" value="0" disabled></td>
+                </tr>
+        </table>
+        <section class="crono">
+            <div id="display" class="display">
+                <span id="cronometro" class="cronometro">00:00</span>
+                <span id="reloj" class="reloj"></span>
+            </div>
+            <div class="controles">
+                <div class="control btnPlay" id="btnPlay" onclick="iniciar()"><i class="fa-solid fa-play play" ></i></div>
+                <div class="control btnPause" id="btnPause" onclick="pausar()"><i class="fa-solid fa-pause"></i></div>
+                <div class="control btnStop" onclick="detener()"><i class="fa-solid fa-stop"></i></div>
+                <div class="control btnVentana" onclick="abrirVentanaEmergente()"><i class="fa-regular fa-window-restore"></i></div>
+                <div class="control btnCambio" onclick="cambiarTexto()"><i class="fa-solid fa-rotate" id="rotar"></i></div>
+            </div>  
+        </section>
+     </main>
+     <script src="app.js"></script>
+</body>
+</html>

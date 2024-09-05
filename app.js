@@ -40,12 +40,13 @@ function cambiarTexto() {
 function abrirVentanaEmergente() {
 
     const contenido = document.getElementById('display').innerHTML;
-    const ventana = window.open('', 'popupWindow', 'width=600,height=400,left=100,top=100');
+    const ventana = window.open('', 'popupWindow', 'width=600,height=350,left=100,top=100');
 
     ventana.document.write(`
         <html>
         <head>
-            <title>CRÓNOMETRO+</title>
+            <title>Cronómetro+</title>
+        <link rel="stylesheet" href="styles-display.css">
         </head>
         <body>
             <span id="window-display">${contenido}</span>
@@ -159,28 +160,34 @@ function pausar() {
 function detener() {
     clearInterval(countdown);
     if (filaActiva === null) return;
+    
     isRunning = false;
-
-    isCountingUp = false;
-    countingUp = 0;
     isPaused = false;
-    updateDisplay(inputs[filaActiva].value, 0);
     btnPause.style.display = "none";
     btnPlay.style.display = "flex";
     countdownScreen.style.color = "green";
 
     let tiempoRealizado;
-
+    
+    // Calcula el tiempo transcurrido antes de resetear countingUp
     if (remaining > 0) {
         tiempoRealizado = initialTime - remaining;
     } else {
-        tiempoRealizado = initialTime + countingUp;
+        tiempoRealizado = initialTime + countingUp;  // Usa countingUp antes de resetearlo
     }
 
+    // Resetea los contadores
+    isCountingUp = false;
+    countingUp = 0;
+
+    // Calcula los minutos y segundos del tiempo realizado
     const minutes = Math.floor(tiempoRealizado / 60);
     const seconds = tiempoRealizado % 60;
 
+    // Actualiza el valor en la fila activa
     valores[filaActiva].value = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     valores[filaActiva].disabled = false;
 
+    // Actualiza la pantalla
+    updateDisplay(inputs[filaActiva].value, 0);
 }

@@ -1,3 +1,8 @@
+// Estimado usuario:
+// Este proyecto fue realizado sin fines lucrativos y para uso exclusivo del Salón del Reino de los testigos de Jehová.
+// El propósito de este proyecto es poder usarlo con una pantalla externa sin necesidad de cable, ya sea con smartTV o el uso de Chromecast.
+// Por favor no realice ningún cambio en el código. Tenga la bondad de contactar al desarrollador si necesita añadir o corregir alguna función y/o estilo.
+
 //------------------------------------------------------------------------------RELOJ-----------------------------------------------------------------
 
 function actualizarReloj() {
@@ -36,11 +41,16 @@ function cambiarTexto() {
 }
 
 //-----------------------------------------------------------------------ABRIR VENTANA EMERGENTE----------------------------------------------------------
-
+let ventana = null;
 function abrirVentanaEmergente() {
 
     const contenido = document.getElementById('display').innerHTML;
-    const ventana = window.open('', 'popupWindow', 'width=600,height=350,left=100,top=100');
+
+    if (ventana && !ventana.closed) {
+        ventana.focus();  // Traer la ventana al frente
+        return;  // No recargar contenido ni abrir otra ventana
+    }
+    ventana = window.open('', 'popupWindow', 'width=600,height=350,left=100,top=100');
 
     ventana.document.write(`
         <html>

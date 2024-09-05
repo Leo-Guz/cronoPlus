@@ -48,10 +48,13 @@ function abrirVentanaEmergente() {
             <title>CRÓNOMETRO+</title>
         </head>
         <body>
-            ${contenido}
+            <span id="window-display">${contenido}</span>
         </body>
         </html>
     `);
+    setInterval(function () {
+        ventana.document.getElementById('window-display').innerHTML = document.getElementById('display').innerHTML;
+    }, 200);
 }
 
 //------------------------------------------------------------------------LÓGICA DEL CRONÓMETRO-------------------------------------------------------------

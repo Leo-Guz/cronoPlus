@@ -197,6 +197,7 @@ function detener() {
     // Actualiza el valor en la fila activa
     valores[filaActiva].value = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     valores[filaActiva].disabled = false;
+    valores[filaActiva].readonly = true;
 
     // Actualiza la pantalla
     updateDisplay(inputs[filaActiva].value, 0);

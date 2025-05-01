@@ -201,4 +201,9 @@ function detener() {
 
     // Actualiza la pantalla
     updateDisplay(inputs[filaActiva].value, 0);
+
+    // Pasar automáticamente a la siguiente fila si existe
+    if (filaActiva !== null && filaActiva < filas.length - 1) {
+    fijarTiempo(filaActiva + 1);
+}
 }

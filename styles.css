@@ -188,4 +188,7 @@ input {
         box-shadow: 2px 2px 10px rgb(0, 0, 0);
         margin: 25px 15px 5px;
     }
+    .reloj {
+        font-size: 60px;
+    }
   }

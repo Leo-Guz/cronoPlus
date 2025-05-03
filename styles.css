@@ -3,6 +3,8 @@ Este proyecto fue realizado sin fines lucrativos y para uso exclusivo del Salón
 El propósito de este proyecto es poder usarlo con una pantalla externa sin necesidad de cable, ya sea con smartTV o el uso de Chromecast.
 Por favor no realice ningún cambio en el código. Tenga la bondad de contactar al desarrollador si necesita añadir o corregir alguna función y/o estilo. */
 
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     background-color: rgb(30, 90, 140);
 }
@@ -110,8 +112,12 @@ input {
     border-radius: 20px;
     height: 75%;
     width: 100%;
-    font-size: 180px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    font-family: "Public Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+    font-size: 160px;
     align-items: center;
     justify-content: center;
     color: green;
@@ -161,3 +167,25 @@ input {
     transition: transform 0.5s;
     display: inline-block;
 }
+
+@media (max-width: 800px) {
+    .crono {
+        height: 40vh;
+        width: 45vw;
+    }
+    .display {
+        font-size: 90px;
+    }
+    .controles {
+        flex-wrap: wrap;
+        height: 50%;
+        justify-content: space-evenly;
+    }
+    .control {
+        width: 40%;
+        height: 50%;
+        font-size: 50px;
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        margin: 25px 15px 5px;
+    }
+  }
